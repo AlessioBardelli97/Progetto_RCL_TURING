@@ -1,3 +1,7 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

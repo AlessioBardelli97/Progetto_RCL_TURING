@@ -1,3 +1,7 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
+
 import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -36,10 +40,10 @@ public class MainClassTuringServer {
             }
 
         } catch (IndexOutOfBoundsException | NumberFormatException ignored) {}
-
+		
         try {
 
-            RegisterMethodImplementation turing = new RegisterMethodImplementation(listRegisteredUsers);
+            RegisterMethod turing = new RegisterMethodImplementation(listRegisteredUsers);
             LocateRegistry.createRegistry(service_register_port);
 
             LocateRegistry.getRegistry(service_register_port).rebind(
@@ -395,8 +399,12 @@ public class MainClassTuringServer {
                 catch (NumberFormatException ex) { break; }
                 if (section < 0) { break; }
 
-                String userName = splitRequest[1], documentName = splitRequest[2], fileContent = splitRequest[4];
-                System.out.println("End-edit: userName=" + userName + " documentName=" + documentName + " section=" + section);
+				String userName = splitRequest[1], documentName = splitRequest[2], fileContent;
+				
+				try { fileContent = splitRequest[4]; }
+				catch (ArrayIndexOutOfBoundsException ex) { fileContent = " "; }
+                
+				System.out.println("End-edit: userName=" + userName + " documentName=" + documentName + " section=" + section);
 
                 synchronized (listRegisteredUsers) {
 

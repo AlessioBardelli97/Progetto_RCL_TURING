@@ -1,3 +1,7 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
@@ -5,6 +9,7 @@ import java.rmi.RemoteException;
  * Interfaccia remota per la registarzione a TURING,
  * che espone il relativo metodo.
  */
+ 
 public interface RegisterMethod extends Remote {
 
     /**

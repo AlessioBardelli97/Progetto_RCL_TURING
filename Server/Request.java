@@ -1,4 +1,8 @@
 /**
+ * Alessio Bardelli Mat. 544270
+ */
+
+/**
  * Classe che implementa il formato di scambio di richieste,
  * tra il client e il server turing.
  *

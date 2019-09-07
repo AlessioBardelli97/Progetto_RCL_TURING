@@ -1,3 +1,7 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
+
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;

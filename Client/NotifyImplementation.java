@@ -1,12 +1,20 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
+ 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+
+/**
+ * Classe che implememta l'interfaccia Notify.
+ */
 
 @SuppressWarnings("RedundantThrows")
 
 class NotifyImplementation
         extends UnicastRemoteObject implements Notify {
 
-// ================= VARIABILI DI ISTANZA ================================================================== \\
+// ================= VARIABILI STATICHE ==================================================================== \\
 
     private static final long serialVersionUID = 1L;
 

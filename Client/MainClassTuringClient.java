@@ -1,3 +1,7 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
+
 import java.io.IOException;
 import java.net.*;
 import java.rmi.NotBoundException;
@@ -36,8 +40,8 @@ public class MainClassTuringClient {
             }
 
         } catch (IndexOutOfBoundsException | NumberFormatException ignored) {}
-
-        SocketAddress serverSocketAddress = new InetSocketAddress(server_address, server_port);
+		
+		SocketAddress serverSocketAddress = new InetSocketAddress(server_address, server_port);
 
         Scanner in = new Scanner(System.in);
 
@@ -201,7 +205,12 @@ public class MainClassTuringClient {
 
                         System.out.println("  Nessun utente è al momento loggato.\n");
                         continue;
-                    }
+						
+                    } else if (documentNameEdited != null) {
+						
+						System.out.println("  Impossibile effettuare il logout, l'utente sta' editando un documento.\n");
+						continue;
+					}
 
                     Request logoutRequest = Request.makeLogoutRequest(userLoggedName);
 
@@ -460,7 +469,7 @@ public class MainClassTuringClient {
 
                         try {
 
-                            if (chat != null) { chat.destroy(); }
+                            if (chat != null) { chat.leaveChat(); }
 
                             Notify notifyObject = new NotifyImplementation();
                             turing.registerForCallback(userLoggedName, notifyObject);
@@ -487,7 +496,7 @@ public class MainClassTuringClient {
 
                         try {
 
-                            if (chat != null) { chat.destroy(); }
+                            if (chat != null) { chat.leaveChat(); }
 
                             Notify notifyObject = new NotifyImplementation();
                             turing.registerForCallback(userLoggedName, notifyObject);
@@ -586,5 +595,7 @@ public class MainClassTuringClient {
                 default: System.out.println("  Comando sconosciuto\n");
             }
         }
+
+        System.exit(0);
     }
 }

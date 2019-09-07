@@ -1,3 +1,6 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
 
 /** Classe utilizzata per gestire gli indirizzi di multicast. */
 

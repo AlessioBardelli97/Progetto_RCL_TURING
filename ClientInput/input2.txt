@@ -1,0 +1,7 @@
+login pluto 1111
+edit Prova_1 1
+receive
+send ciao pippo!
+end-edit Prova_1 1
+logout
+--exit

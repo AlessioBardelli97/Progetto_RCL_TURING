@@ -1,0 +1,13 @@
+login pippo 0000
+register pippo 0000
+login pippo 1111
+login pippo 0000
+edit Prova_1 0
+end-edit Prova_1 0
+create Prova_1 2
+edit Prova_1 0
+logout
+end-edit Prova_1 0
+--exit
+logout
+--exit

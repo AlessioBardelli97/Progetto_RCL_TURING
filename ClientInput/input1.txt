@@ -1,0 +1,13 @@
+register pippo 0000
+register pluto 1111
+login pippo 0000
+create Prova_1 4
+share Prova_1 pluto
+create Prova_2 6
+list
+edit Prova_1 0
+send ciao a tutti!
+receive
+end-edit Prova_1 0
+logout
+--exit

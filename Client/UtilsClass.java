@@ -1,4 +1,8 @@
 /**
+ * Alessio Bardelli Mat. 544270
+ */
+
+/**
  * Classe che offre variabili globali per reperire porte e indirizzi predefiniti
  * dei vari servizi offerti da TURING.
  * Contiene in oltre variabili per la gestione delle chat dei documenti, 
@@ -6,6 +10,15 @@
  */
 
 class UtilsClass {
+	
+// ================= VARIABILI DI UTILITA' ====================================================== \\
+
+    /**
+     * Massima dimensione, in byte,
+     * di un messagio che si può inviare
+     * sulla chat di un documento.
+     */
+    static final int MAX_MESSAGE_LENGTH = 16384;
 
 // ================= INFO DI DEFAULT PER REPERIRE IL SERVER  ==================================== \\
 
@@ -26,40 +39,4 @@ class UtilsClass {
     static final int MAX_MULTICASTADDRESS_NUMBER = 256;
 
     static final MulticastArray multicastArray = new MulticastArray();
-
-// ================= VARIABILI DI UTILITA' ====================================================== \\
-
-    /**
-     * Numero di sezioni di default,
-     * usato se durante la creazione di un nuovo documento
-     * l'utente specifica un numero di sezioni minore o uguale a zero.
-     */
-    static final int DEFAULT_NUM_SECTIONS = 3;
-
-    /**
-     * Tempo in millisecondi,
-     * in cui il thread cleaner dorme.
-     */
-    static final long SLEEPING_TIME = 600000;
-
-    /**
-     * Tempo massimo in millisecondi,
-     * per cui è possibile editare
-     * una sezione di un documento.
-     */
-    static final long MAX_EDIT_TIME = 3600000;
-
-    /**
-     * Massima dimensione, in byte,
-     * di un messagio che si può inviare
-     * sulla chat di un documento.
-     */
-    static final int MAX_MESSAGE_LENGTH = 16384;
-
-    /**
-     * Tempo in millisecondi,
-     * per cui è possibile restare in stato di LOGIN,
-     * da parte di un utente.
-     */
-    static final long MAX_LOGIN_TIME = 3600000;
 }

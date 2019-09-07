@@ -1,3 +1,7 @@
+/**
+ * Alessio Bardelli Mat. 544270
+ */
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
@@ -42,7 +46,7 @@ class Chat extends Thread {
      * quindi abbandona la chat.
      * Invocato dal client quando l'utente esegue una end-edit.
      */
-    void destroy() throws IOException {
+    void leaveChat() throws IOException {
 
         multicastSocket.leaveGroup(groupAddress);
         multicastSocket.close();
